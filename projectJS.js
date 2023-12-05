@@ -1,27 +1,25 @@
 function generateMealPlan() {
-    //  email
-    var emailInput = document.getElementById("email").value;
-    if (!isValidEmail(emailInput)) {
-        alert("Please enter a valid email address.");
-        return;
-    }
+	// Validate email
+	var emailInput = document.getElementById("email").value;
+	if (!isValidEmail(emailInput)) {
+		alert("Please enter a valid email address.");
+		return;
+	}
 
-    // input values
-    var name = document.getElementById("name").value;
-    var email = emailInput;
-    var goal = document.getElementById("goal").value;
-    
-    // meal input values 
-    var monday = document.getElementById("monday").value;
-    var tuesday = document.getElementById("tuesday").value;
-    var wednesday = document.getElementById("wednesday").value;
-    var thursday = document.getElementById("thursday").value;
-    var friday = document.getElementById("friday").value;
-    var saturday = document.getElementById("saturday").value;
-    var sunday = document.getElementById("sunday").value;
+	// Get user input values
+	var name = document.getElementById("name").value;
+	var email = emailInput;
+	var goal = document.getElementById("goal").value;
 
-    // HTML meal plan
-    var mealPlanHTML = `
+	// Get meal input values for each day of the week
+	var breakfast = document.getElementById("breakfast").value;
+	var snack1 = document.getElementById("snack1").value;
+	var lunch = document.getElementById("lunch").value;
+	var snack2 = document.getElementById("snack2").value;
+	var dinner = document.getElementById("dinner").value;
+
+	// HTML meal plan
+	var mealPlanHTML = `
         <html>
         <head>
             <title>Meal Plan for ${name}</title>
@@ -39,34 +37,31 @@ function generateMealPlan() {
 
             <h2>Meal Plan:</h2>
             <ul>
-                <li><strong>Monday:</strong> ${monday}</li>
-                <li><strong>Tuesday:</strong> ${tuesday}</li>
-                <li><strong>Wednesday:</strong> ${wednesday}</li>
-                <li><strong>Thursday:</strong> ${thursday}</li>
-                <li><strong>Friday:</strong> ${friday}</li>
-                <li><strong>Saturday:</strong> ${saturday}</li>
-                <li><strong>Sunday:</strong> ${sunday}</li>
+                <li><strong>Breakfast:</strong> ${breakfast}</li>
+                <li><strong>Snack:</strong> ${snack1}</li>
+                <li><strong>Lunch:</strong> ${lunch}</li>
+                <li><strong>Snack:</strong> ${snack2}</li>
+                <li><strong>Dinner:</strong> ${dinner}</li>
             </ul>
         </body>
         </html>
     `;
 
-    // new tab
-    var newTab = window.open();
-    newTab.document.write(mealPlanHTML);
+	// Open a new tab and write the content
+	var newTab = window.open();
+	newTab.document.write(mealPlanHTML);
 }
 
-
 function isValidEmail(email) {
-    // email validation
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+	// Basic email validation using a regular expression
+	var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	return emailRegex.test(email);
 }
 
 function clearForm() {
-    document.getElementById("mealPlanForm").reset();
+	document.getElementById("mealPlanForm").reset();
 }
 
 function printMealPlan() {
-    window.print();
+	window.print();
 }

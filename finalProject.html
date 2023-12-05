@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WEB-115 Final Project</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Vina+Sans" />
-    <script src="projectJS.js"></script>
-  </head>
-  <body>
-    <header>
-      <h1>Perfectly Portioned Fitness</h1>
-      <p>Build Your Meal Plan</p>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WEB-115 Final Project</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Orbitron&display=swap"
+		/>
+		<script src="projectJS.js"></script>
+	</head>
+	<body>
+		<header></header>
 
-    <form id="mealPlanForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required />
+		<form id="mealPlanForm">
+			<label for="name">Name:</label>
+			<input type="text" id="name" required />
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" required />
+			<label for="email">Email:</label>
+			<input type="email" id="email" required />
 
-      <label for="goal">Goal for the Week:</label>
-      <textarea id="goal" rows="4" required></textarea>
+			<label for="goal">Goal for the Week:</label>
+			<textarea id="goal" rows="4" required></textarea>
 
-      <label for="breakfast">Breakfast:</label>
-      <input type="text" id="breakfast" required />
-      <label for="snack1">Snack:</label>
-      <input type="text" id="snack1" required />
-      <label for="lunch">Lunch:</label>
-      <input type="text" id="lunch" required />
-      <label for="snack2">Snack:</label>
-      <input type="text" id="snack2" required />
-      <label for="dinner">Dinner:</label>
-      <input type="text" id="dinner" required />
+			<!-- Meal Input Section -->
+			<label for="breakfast">Breakfast:</label>
+			<input type="text" id="breakfast" required />
 
-      <button type="button" onclick="generateMealPlan()">
-        Generate Meal Plan
-      </button>
+			<label for="snack1">Snack:</label>
+			<input type="text" id="snack1" required />
 
-      <button type="button" onclick="clearForm()">Clear Form</button>
+			<label for="lunch">Lunch:</label>
+			<input type="text" id="lunch" required />
 
-      <button type="button" onclick="printMealPlan()">
-        Print/Download Meal Plan
-      </button>
-    </form>
-  </body>
+			<label for="snack2">Snack:</label>
+			<input type="text" id="snack2" required />
+
+			<label for="dinner">Dinner:</label>
+			<input type="text" id="dinner" required />
+
+			<!-- Button to Generate Meal Plan -->
+			<button type="button" onclick="generateMealPlan()">
+				Generate Meal Plan
+			</button>
+
+			<!-- Button to Clear Form -->
+			<button type="button" onclick="clearForm()">Clear Form</button>
+
+			<!-- Button to Print/Download Meal Plan -->
+			<button type="button" onclick="printMealPlan()">
+				Print/Download Meal Plan
+			</button>
+		</form>
+	</body>
 </html>

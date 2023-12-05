@@ -1,47 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
 body {
-    font-family: Arial, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 header {
-    font-family: 'Orbitron', sans-serif;
-    font-size: larger;
-    background-color: #0a2253;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+	font-family: "Orbitron", sans-serif;
+	font-size: larger;
+	background-image: url("/images/banner3.jpg");
+	width: 100vw;
+	height: 180px;
+	opacity: 1;
+	z-index: 6;
+	background-size: 100%;
 }
 
 form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+	max-width: 600px;
+	margin: 20px auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+	display: block;
+	margin-bottom: 5px;
 }
 
 input,
 textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
 }
 
 button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 button:hover {
-    background-color: #555;
+	background-color: #555;
 }
